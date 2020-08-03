@@ -1,11 +1,11 @@
-const printOwing = require('./script')
+const printInvoice = require('.')
 
-describe('printOwing function', () => {
+describe('printInvoice function', () => {
   it('should call console.log() with correct values', () => {
     const spy = jest.spyOn(console, 'log')
 
     const invoice = { customer: 'Jean-Baptiste Larraché' }
-    printOwing(invoice)
+    printInvoice(invoice)
 
     expect(console.log).toHaveBeenCalledTimes(3)
     expect(console.log).toHaveBeenNthCalledWith(2, 'name: Jean-Baptiste Larraché')
